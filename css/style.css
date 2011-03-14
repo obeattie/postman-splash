@@ -1,0 +1,370 @@
+/*****************************************
+Title: Postman
+Authour: Adam Collingburn
+******************************************/
+
+header, nav, section, footer {display:block;}
+
+/*****************************************
+TEXT
+******************************************/
+body{
+	font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #6c6a67;
+}
+
+a{
+	color: #6c6a67;
+	text-decoration: none;
+}
+
+@font-face {
+font-family: 'Ubuntu';
+src: url(../fonts/Ubuntu-r.ttf);
+font-weight: 700;
+}
+
+
+/*****************************************
+BODY
+******************************************/
+
+html{
+	background: #d8c9a9 url(../img/back.jpg) no-repeat fixed center top;
+}
+
+body{
+	background: url(../img/env.png) no-repeat center top;
+	overflow: auto;
+	min-width:880px;
+}
+
+
+.wrapper{
+	min-width: 880px;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/*****************************************
+HEADER
+******************************************/
+
+header{
+	text-align: center;
+	margin-bottom: 720px;
+}
+
+header > h1{
+	display: inline-block;
+	width: 500px;
+	height: 61px;
+	margin:  148px 0 31px 15px;
+	text-indent: -9999px;
+	background: url(../img/logo.png) no-repeat left top;
+}
+
+header > p{
+	font-size: 23px;
+	font-weight: 500;
+	text-shadow: black 1px 1px 2px ;
+	margin-bottom: 55px;
+}
+
+header > a{
+	display: block;
+	width: 400px;
+	height: 180px;
+	left: 80px;
+	margin: auto;
+	position: relative;
+	text-indent: -9999em;
+	background: url(../img/stamp.png) no-repeat left top;
+
+}
+
+header > a:active{
+	top: 10px;
+	height: 180px;
+
+}
+
+header > a span {
+	display: block;
+	width: 400px;
+	height: 270px;
+	position: absolute;
+	top: -49px;
+	cursor: pointer !important;
+	background: url(../img/stamp.png) no-repeat;
+	background-position: left -185px;
+    opacity:0;
+    -webkit-transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    transition: opacity .5s ease-out;
+}
+
+header > a:hover span{
+    opacity: .8;
+    -webkit-transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+    transition: opacity .3s ease-in;
+}
+       
+
+
+/*****************************************
+NAV
+******************************************/
+
+#navi ol, #navi-block{
+	position: absolute;
+	width: 560px;
+	bottom: 10px;
+	margin-left:200px;
+	min-width:880px;
+	max-width:960px;
+}
+
+#navi ol{
+	
+	background: url(../img/nav.png) no-repeat -19px 125px;
+}
+
+#navi ol.sticky{
+	position: fixed;
+	top: 0;
+	z-index: 998;
+}
+
+#navi-block{
+	margin-right: 64px;
+	float:  left;
+}
+
+#navi li {
+	margin-right: 64px;
+	float: left;
+	opacity: 1;
+}
+        
+#navi li:last-child,
+#navi li.last {
+     margin-right: 0;
+}
+            
+#navi li:hover,
+#navi li.active {
+
+	opacity: 1;
+}
+            
+#navi li.active {
+	width: 64px;
+	background: url(../img/nav.png) no-repeat -1px -88px;
+	background-position: left -75px;
+}
+            
+                   
+#navi a {
+	display: block;
+    width: 60px;
+    height: 75px;
+    font-size: 11px;
+    font-weight: bold;
+    background: url(../img/nav.png) no-repeat left top;
+    zoom: 1;
+    text-indent: -9999px;
+    overflow: hidden;
+    opacity: 1;
+}
+        
+#navi a:hover,
+#navi a:active{
+	background: url(../img/icone.png) no-repeat;
+}
+    
+            
+#navi a[href="#throw"] {
+	background-position: -1px 9px;
+}
+            
+#navi a[href="#friends"] {
+	background-position: -111px 9px;
+}
+            
+#navi a[href="#inbox"] {
+	background-position: -225px 9px;
+}
+            
+#navi a[href="#how"] {
+	background-position: -349px 9px;
+}
+            
+#navi a[href="#follow"] {
+	background-position: -485px 9px;
+}
+
+/*****************************************
+SECTIONS
+******************************************/
+
+section > ol{
+	font-size: 18px;
+	line-height: 24px;
+	
+}
+
+section > ol > li{
+	position: relative;
+	padding-top: 220px;
+	margin-bottom: 700px;
+}
+
+section > ol > li:after{
+	content: "";
+	display: block;
+	position: absolute;
+}
+
+section > ol > span:after{
+	content: "";
+	display: block;
+	position: absolute;
+}
+
+#throw span, #inbox span{
+	margin-left: 550px;
+}
+
+#friends{
+	margin-left: 60px;
+}
+
+#throw h2{
+	width: 391px;
+	height: 60px;
+	margin-left: 540px;
+	text-indent: -9999px;
+	background: url(../img/throw.png) no-repeat left top;
+}
+
+#throw:after{
+	
+	top: 240px;
+	left: 40px;
+	width: 345px;
+	height: 345px;
+	background: url(../img/bin.png) no-repeat left top;
+}
+
+#friends h2{
+	width: 391px;
+	height: 60px;
+	margin-left: -10px;
+	text-indent: -9999px;
+	background: url(../img/friends.png) no-repeat left top;
+}
+
+
+#friends:after{
+	
+	top: 280px;
+	left: 490px;
+	width: 425px;
+	height: 85px;
+	background: url(../img/facebook.png) no-repeat left top;
+}
+
+#inbox h2{
+	width: 431px;
+	height: 60px;
+	margin-left: 535px;
+	text-indent: -9999px;
+	background: url(../img/inbox.png) no-repeat left top;
+}
+
+#inbox:after{
+	
+	top: 200px;
+	left: 40px;
+	width: 345px;
+	height: 595px;
+	background: url(../img/postbox.png) no-repeat left top;
+}
+
+#how h2{
+	width: 301px;
+	height: 43px;
+	margin-left: 290px;
+	text-indent: -9999px;
+	background: url(../img/how.png) no-repeat left top;
+}
+
+#how{
+	margin-left: 70px;
+	text-align: center;
+}
+
+
+
+#google{
+	position: absolute;
+	top: -20px;
+	left: -80px;
+	width: 80px;
+	height: 80px;
+	background: url(../img/google.png) no-repeat left top;
+	background-position: ;
+	
+}
+
+#chrome a{
+	position: absolute;
+	top: 850px;
+	left: 150px;
+}
+
+#postman{
+	position: absolute;
+	top: -15px;
+	left: -80px;
+	width: 75px;
+	height: 60px;
+	background: url(../img/post.png) no-repeat left top;
+	background-position: ;
+	
+}
+
+#post a{
+	position: absolute;
+	top: 850px;
+	left: 620px;
+}
+
+/*****************************************
+SECTIONS
+******************************************/
+footer{
+	text-align: center;
+	margin-bottom: 400px;
+}
+
+
+footer h1{
+		display: inline-block;
+	width: 500px;
+	height: 61px;
+	margin:  198px 0 31px 15px;
+	text-indent: -9999px;
+	background: url(../img/logo.png) no-repeat left top;
+}
+
+footer > p{
+	font-size: 23px;
+	font-weight: 500;
+	text-shadow: black 1px 1px 2px ;
+	margin-bottom: 55px;
+}
