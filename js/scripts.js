@@ -1,4 +1,4 @@
-    // Scrolling Navigatio
+    // Scrolling Navigation
 
 	var name = "#navi > ol";
 	var menuYloc = null;
