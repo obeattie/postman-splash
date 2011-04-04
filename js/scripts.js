@@ -1,65 +1,59 @@
-    // Scrolling Navigation
-
-	var name = "#navi > ol";
-	var menuYloc = null;
-
-		$(document).ready(function(){
-			menuYloc = parseInt($(name).css("bottom").substring(0,$(name).css("bottom").indexOf("px")))
-			$(window).scroll(function () { 
-				offset = "-" + $(document).scrollTop()+"px";
-				$(name).animate({bottom: offset},{duration:300,queue:false});
-			});
-		});
-
-$(function() {
+var BS = {
+    anchorRe: /^\#\!\/(.*)$/,
+    slides: undefined,
+    selectedSlideIndex: 0,
     
-    //Scrolling Funcations
+    scrollToSection: function(target){
+        var top = target.position().top;
+        // Calculate the element centered within the viewport
+        var height = target.outerHeight(true);
+        var viewport = $(window).height();
+        var position = (top - ((viewport - height) / 2));
+        $('body').animate({
+            scrollTop: position
+        }, { queue: false });
+        window.location.hash = ('!/' + target.attr('id'));
+        console.log(BS.slides);
+        BS.selectedSlideIndex = BS.slides.index(target);
+    }
+};
+
+$(function(){
+    BS.slides = $('header, #content > ol > li, footer');
     
-	$('#ding').click(function(){
-		$('html, body').animate({scrollTop:1270}, 'slow');
-		return false;
-	});
-	
-	$('#away').click(function(){
-		$('html, body').animate({scrollTop:1270}, 'slow');
-		return false;
-	});
-	
-	$('#all').click(function(){
-		$('html, body').animate({scrollTop:2470}, 'slow');
-		return false;
-	});
-	
-	$('#throw').click(function(){
-		$('html, body').animate({scrollTop:2470}, 'slow');
-		return false;
-	});
-	
-	$('#person').click(function(){
-		$('html, body').animate({scrollTop:3690}, 'slow');
-		return false;
-	});
-	
-	$('#friends').click(function(){
-		$('html, body').animate({scrollTop:3690}, 'slow');
-		return false;
-	});
-	
-	$('#it').click(function(){
-		$('html, body').animate({scrollTop:5050}, 'slow');
-		return false;
-	});
-	
-	$('#inbox').click(function(){
-		$('html, body').animate({scrollTop:5050}, 'slow');
-		return false;
-	});
-	
-	$('#us').click(function(){
-		$('html, body').animate({scrollTop:6500}, 'slow');
-		return false;
-	});
-	
+    $('#navi a').click(function(e){
+        e.preventDefault();
+        var target = $($(this).attr('href'));
+        BS.scrollToSection(target);
+        return false;
+    });
+    
+    // Scroll to the right place on load if necessary
+    if (window.location.hash.match(BS.anchorRe)) {
+        BS.scrollToSection($('#' + RegExp.$1));
+    }
+    
+    // Map left/right key presses to move between slides
+    $(document).keydown(function(e){
+        var arrow = { left: 37, right: 39 },
+            target = BS.selectedSlideIndex;
+        
+        if (e.keyCode == arrow.left) {
+            target--;
+        } else if (e.keyCode == arrow.right) {
+            target++;
+        } else {
+            return; // Nothing to do
+        }
+        
+        // Clamp the index within bounds
+        if (target < 0){
+            target = (BS.slides.length - 1);
+        } else if (target > (BS.slides.length - 1)) {
+            target = 0;
+        }
+        
+        target = BS.slides.eq(target);
+        BS.scrollToSection(target);
+    });
 });
-
-
