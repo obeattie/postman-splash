@@ -223,6 +223,7 @@ section > ol{
 section > ol > li {
     position: relative;
     margin: 700px 0;
+    padding: 20px 0;
 }
 
 section > ol > li:after{
@@ -231,10 +232,14 @@ section > ol > li:after{
     position: absolute;
 }
 
-section > ol > span:after{
-    content: "";
-    display: block;
-    position: absolute;
+section p {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#throw p, #inbox p {
+    margin-left: 550px;
 }
 
 #throw span, #inbox span{
@@ -261,15 +266,19 @@ section > ol > span:after{
     background: url('../img/facebook.png') center right no-repeat;
 }
 
-#friends h2{
-    width: 391px;
-    height: 60px;
-    margin-left: -10px;
-    text-indent: -9999px;
-    background: url(../img/friends.png) no-repeat left top;
-}
+    #friends p {
+        margin-right: 500px;
+    }
 
-#inbox h2{
+    #friends h2 {
+        width: 391px;
+        height: 60px;
+        margin-left: -10px;
+        text-indent: -9999px;
+        background: url(../img/friends.png) no-repeat left top;
+    }
+
+#inbox h2 {
     width: 431px;
     height: 60px;
     margin-left: 535px;

@@ -13,7 +13,6 @@ var BS = {
             scrollTop: position
         }, { queue: false });
         window.location.hash = ('!/' + target.attr('id'));
-        console.log(BS.slides);
         BS.selectedSlideIndex = BS.slides.index(target);
     }
 };
@@ -22,7 +21,7 @@ $(function(){
     BS.slides = $('header, #content > ol > li, footer');
     
     // Slide to the correct slide when the nav is clicked
-    $('#navi a').click(function(e){
+    $('#navi a, a#ding').click(function(e){
         e.preventDefault();
         var target = $($(this).attr('href'));
         BS.scrollToSection(target);
@@ -46,11 +45,12 @@ $(function(){
     // Map left/right key presses to move between slides
     $(document).keydown(function(e){
         var arrow = { left: 37, right: 39 },
-            target = BS.selectedSlideIndex;
+            target = BS.selectedSlideIndex,
+            key = (e.keyCode || e.which);
         
-        if (e.keyCode == arrow.left) {
+        if (key == arrow.left) {
             target--;
-        } else if (e.keyCode == arrow.right) {
+        } else if (key == arrow.right) {
             target++;
         } else {
             return; // Nothing to do
@@ -65,5 +65,17 @@ $(function(){
         
         target = BS.slides.eq(target);
         BS.scrollToSection(target);
+    });
+    
+    // A click on something that isn't a link (that bubbles up to the
+    // document level) results in showing the next slide
+    $(document.body).click(function(e){
+        if (!$(e.target).closest('a').length) {
+            // Achieve this by simulating a right keypress
+            $(document).trigger({
+                type: 'keydown',
+                keyCode: 39
+            });
+        }
     });
 });
