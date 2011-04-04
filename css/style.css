@@ -1,6 +1,6 @@
 /*****************************************
 Title: Postman
-Authour: Adam Collingburn
+Author: Adam Collingburn
 ******************************************/
 
 header, nav, section, footer {display:block;}
@@ -250,16 +250,16 @@ section > ol > span:after{
 	height: 60px;
 	margin-left: 540px;
 	text-indent: -9999px;
-	background: url(../img/throw.png) no-repeat left top;
+	background: url(../img/sharing.png) no-repeat left top;
 }
 
 #throw:after{
 	
-	top: 240px;
-	left: 40px;
-	width: 345px;
-	height: 345px;
-	background: url(../img/bin.png) no-repeat left top;
+	top: 200px;
+	left: 20px;
+	width: 470px;
+	height: 430px;
+	background: url(../img/pages.png) no-repeat left top;
 }
 
 #friends h2{
@@ -310,40 +310,74 @@ section > ol > span:after{
 	text-align: center;
 }
 
+#how  span{
+    font-size:14px;
+}
 
+#how #send span{
+    font-size:20px;
+}
 
+#steps{
+    position:absolute;
+    width:900px;
+    height:330px;
+    background:url(../img/reasons.png) no-repeat left top;);
+}  
+
+#how #hit{
+    position:relative;
+    top:290px;
+    right:300px;
+} 
+
+#how #tell{
+    position:relative;
+    top:270px;
+    right:40px;
+}
+
+#how #via{
+    position:relative;
+    top:249px;
+    margin-left:650px;
+}
 #google{
 	position: absolute;
 	top: -20px;
 	left: -80px;
-	width: 80px;
-	height: 80px;
+	width: 180px;
+	height: 40px;
 	background: url(../img/google.png) no-repeat left top;
-	background-position: ;
-	
+}                                                         
+
+#google:active{
+    background-position:left -45px;
 }
 
 #chrome a{
 	position: absolute;
-	top: 850px;
-	left: 150px;
+	top: 700px;
+	margin-left: 300px;
 }
 
 #postman{
 	position: absolute;
 	top: -15px;
 	left: -80px;
-	width: 75px;
-	height: 60px;
-	background: url(../img/post.png) no-repeat left top;
-	background-position: ;
-	
+	width: 150px;
+	height: 45px;
+	background: url(../img/postman_get.png) no-repeat left top;  
+}
+
+#postman:active{
+    background-position:left -45px;
 }
 
 #post a{
 	position: absolute;
-	top: 850px;
-	left: 620px;
+	top: 698px;
+    margin-left: 600px;
 }
 
 /*****************************************
