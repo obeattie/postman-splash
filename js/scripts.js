@@ -21,11 +21,21 @@ var BS = {
 $(function(){
     BS.slides = $('header, #content > ol > li, footer');
     
+    // Slide to the correct slide when the nav is clicked
     $('#navi a').click(function(e){
         e.preventDefault();
         var target = $($(this).attr('href'));
         BS.scrollToSection(target);
         return false;
+    });
+    
+    // Tooltips for navigation items
+    $('#navi a').tipsy({
+        fade: true,
+        gravity: 's',
+        title: function(){
+            return $(this).text();
+        }
     });
     
     // Scroll to the right place on load if necessary
