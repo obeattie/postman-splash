@@ -1,49 +1,47 @@
 /*****************************************
 Title: Postman
-Author: Adam Collingburn
+Author: Adam Collingburn, Oliver Beattie
 ******************************************/
 
-header, nav, section, footer {display:block;}
+header, nav, section, footer {
+    display:block;
+}
 
 /*****************************************
 TEXT
 ******************************************/
-body{
+body {
     font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #6c6a67;
     padding-bottom: 400px;
 }
 
-a{
+a {
     color: #6c6a67;
     text-decoration: none;
 }
 
 @font-face {
-font-family: 'Ubuntu';
-src: url(../fonts/Ubuntu-r.ttf);
-font-weight: 700;
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-r.ttf');
+    font-weight: 700;
 }
-
 
 /*****************************************
 BODY
 ******************************************/
 
-html{
-    background: #d8c9a9 url(../img/back.jpg) no-repeat fixed center top;
+html {
+    background: #d8c9a9 url('../img/back.jpg') no-repeat fixed center top;
 }
 
-body{
-    background: url(../img/env.png) no-repeat center top;
-    overflow: auto;
-    min-width:880px;
+body {
+    background: url('../img/env.png') center top no-repeat;
+    min-width: 960px;
 }
 
-
-.wrapper{
-    min-width: 880px;
-    max-width: 960px;
+.wrapper {
+    width: 960px;
     margin: 0 auto;
 }
 
@@ -51,27 +49,27 @@ body{
 HEADER
 ******************************************/
 
-header{
+header {
     text-align: center;
 }
 
-header > h1{
+header > h1 {
     display: inline-block;
     width: 500px;
     height: 61px;
     margin:  148px 0 31px 15px;
     text-indent: -9999px;
-    background: url(../img/logo.png) no-repeat left top;
+    background: url('../img/logo.png') no-repeat left top;
 }
 
-header > p{
+header > p {
     font-size: 23px;
     font-weight: 500;
     text-shadow: black 1px 1px 2px ;
     margin-bottom: 55px;
 }
 
-header > a{
+header > a {
     display: block;
     top: 60px;
     width: 400px;
@@ -80,11 +78,11 @@ header > a{
     margin: auto;
     position: relative;
     text-indent: -9999em;
-    background: url(../img/stamp.png) no-repeat left top;
+    background: url('../img/stamp.png') no-repeat left top;
 
 }
 
-header > a:active{
+header > a:active {
     top: 50px;
     height: 180px;
 
@@ -97,7 +95,7 @@ header > a span {
     position: absolute;
     top: -49px;
     cursor: pointer !important;
-    background: url(../img/stamp.png) no-repeat;
+    background: url('../img/stamp.png') no-repeat;
     background-position: left -185px;
     opacity:0;
     -webkit-transition: opacity .5s ease-out;
@@ -106,7 +104,7 @@ header > a span {
     transition: opacity .5s ease-out;
 }
 
-header > a:hover span{
+header > a:hover span {
     opacity: .8;
     -webkit-transition: opacity .3s ease-in;
     -moz-transition: opacity .3s ease-in;
@@ -120,28 +118,25 @@ header > a:hover span{
 NAV
 ******************************************/
 
-#navi ol, #navi-block{
+#navi ol, #navi-block {
     position: fixed;
-    width: 560px;
+    width: 100%;
     bottom: 10px;
     margin-left:200px;
-    min-width:880px;
-    max-width:960px;
     z-index: 400;
 }
 
-#navi ol{
-    
-    background: url(../img/nav.png) no-repeat -19px 125px;
+#navi ol {
+    background: url('../img/nav.png') no-repeat -19px 125px;
 }
 
-#navi ol.sticky{
+#navi ol.sticky {
     position: fixed;
     top: 0;
     z-index: 998;
 }
 
-#navi-block{
+#navi-block {
     margin-right: 64px;
     float:  left;
 }
@@ -159,13 +154,12 @@ NAV
             
 #navi li:hover,
 #navi li.active {
-
     opacity: 1;
 }
             
 #navi li.active {
     width: 64px;
-    background: url(../img/nav.png) no-repeat -1px -88px;
+    background: url('../img/nav.png') no-repeat -1px -88px;
     background-position: left -75px;
 }
             
@@ -176,7 +170,7 @@ NAV
     height: 75px;
     font-size: 11px;
     font-weight: bold;
-    background: url(../img/nav.png) no-repeat left top;
+    background: url('../img/nav.png') no-repeat left top;
     zoom: 1;
     text-indent: -9999px;
     overflow: hidden;
@@ -185,7 +179,7 @@ NAV
 }
         
 #navi a:hover,
-#navi a:active{
+#navi a:active {
     opacity: 1;
 }
     
@@ -214,22 +208,15 @@ NAV
 SECTIONS
 ******************************************/
 
-section > ol{
+section > ol {
     font-size: 18px;
     line-height: 24px;
-    
 }
 
 section > ol > li {
     position: relative;
     margin: 700px 0;
     padding: 20px 0;
-}
-
-section > ol > li:after{
-    content: "";
-    display: block;
-    position: absolute;
 }
 
 section p {
@@ -242,11 +229,11 @@ section p {
     margin-left: 550px;
 }
 
-#throw span, #inbox span{
+#throw span, #inbox span {
     margin-left: 550px;
 }
 
-#friends{
+#friends {
     margin-left: 60px;
 }
 
@@ -254,12 +241,12 @@ section p {
     background: url('../img/bin.png') left center no-repeat;
 }
 
-#throw h2{
-	width: 391px;
-	height: 60px;
-	margin-left: 540px;
-	text-indent: -9999px;
-	background: url(../img/sharing.png) no-repeat left top;
+#throw h2 {
+    width: 391px;
+    height: 60px;
+    margin-left: 550px;
+    text-indent: -9999px;
+    background: url('../img/sharing.png') no-repeat left top;
 }
 
 #friends {
@@ -273,125 +260,71 @@ section p {
     #friends h2 {
         width: 391px;
         height: 60px;
-        margin-left: -10px;
         text-indent: -9999px;
-        background: url(../img/friends.png) no-repeat left top;
+        background: url('../img/friends.png') no-repeat left top;
     }
 
 #inbox h2 {
     width: 431px;
     height: 60px;
-    margin-left: 535px;
+    margin-left: 550px;
     text-indent: -9999px;
-    background: url(../img/inbox.png) no-repeat left top;
+    background: url('../img/inbox.png') no-repeat left top;
 }
 
-#inbox{
+#inbox {
     padding: 60px 0;
     background: url('../img/postbox.png') center left no-repeat;
 }
 
-#how h2{
+#how h2 {
     width: 301px;
     height: 43px;
-    margin-left: 290px;
-    text-indent: -9999px;
-    background: url(../img/how.png) no-repeat left top;
+    margin: 0 auto;
+    text-indent: -99999em;
+    background: url('../img/how.png') center top no-repeat;
 }
 
-#how{
-    margin-left: 70px;
+#how {
     text-align: center;
 }
 
-#how span{
+#how p {
+    margin: 0 !important;
+}
+
+#how span {
     font-size:14px;
 }
 
-#how #send span{
+#how #send span {
     font-size:20px;
 }
 
-#steps{
-    position:absolute;
-    width:900px;
-    height:330px;
-    background:url(../img/reasons.png) no-repeat left top;);
-}  
-
-#how #hit{
-    position:relative;
-    top:290px;
-    right:300px;
-} 
-
-#how #tell{
-    position:relative;
-    top:270px;
-    right:40px;
-}
-
-#how #via{
-    position:relative;
-    top:249px;
-    margin-left:650px;
-}
-#google{
-	position: absolute;
-	top: -20px;
-	left: -80px;
-	width: 180px;
-	height: 40px;
-	background: url(../img/google.png) no-repeat left top;
-}                                                         
-
-#google:active{
-    background-position:left -45px;
-}
-
-#chrome a{
-	position: absolute;
-	top: 700px;
-	margin-left: 300px;
-}
-
-#postman{
-	position: absolute;
-	top: -15px;
-	left: -80px;
-	width: 150px;
-	height: 45px;
-	background: url(../img/postman_get.png) no-repeat left top;  
-}
-
-#postman:active{
-    background-position:left -45px;
-}
-
-#post a{
-	position: absolute;
-	top: 698px;
-    margin-left: 600px;
+#steps {
+    width: 900px;
+    height: 330px;
+    background: url('../img/reasons.png') top center no-repeat;
+    margin: 0 auto;
 }
 
 /*****************************************
 SECTIONS
 ******************************************/
-footer{
+footer {
     text-align: center;
 }
 
-
-footer h1{
+footer h1 {
     display: inline-block;
     width: 500px;
     height: 61px;
     margin: 0 0 31px 15px;
     text-indent: -9999px;
-    background: url(../img/logo.png) no-repeat left top;
+    background: url('../img/logo.png') no-repeat left top;
 }
 
-footer > p{
+footer p {
     font-size: 23px;
     font-weight: 500;
     text-shadow: black 1px 1px 2px ;
