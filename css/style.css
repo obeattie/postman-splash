@@ -298,15 +298,50 @@ section p {
 }
 
 #how #send span {
-    font-size:20px;
+    font-size: 20px;
 }
 
 #steps {
+    display: block;
     width: 900px;
     height: 330px;
     background: url('../img/reasons.png') top center no-repeat;
     margin: 0 auto;
 }
+
+    #steps li {
+        display: none;
+    }
+
+/* Download buttons */
+
+#download-chrome, #download-postman {
+    display: inline-block;
+    background: url('../img/download-buttons.png') 0 0 no-repeat;
+    text-indent: -99999em;
+    margin: 0 30px;
+}
+
+    #download-chrome {
+        width: 313px;
+        height: 94px;
+        position: relative;
+        top: 54px;
+    }
+    
+        #download-chrome:active {
+            background-position: -313px 0;
+        }
+    
+    #download-postman {
+        width: 313px;
+        height: 187px;
+        background-position: 0 -94px;
+    }
+    
+        #download-postman:active {
+            background-position: -313px -94px;
+        }
 
 /*****************************************
 SECTIONS
