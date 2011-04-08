@@ -13,7 +13,8 @@ TEXT
 body {
     font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #6c6a67;
-    padding-bottom: 400px;
+    padding-bottom: 800px;
+    min-width: 960px;
 }
 
 a {
@@ -37,7 +38,7 @@ html {
 
 body {
     background: url('../img/env.png') center top no-repeat;
-    min-width: 960px;
+    
 }
 
 .wrapper {
@@ -50,69 +51,47 @@ HEADER
 ******************************************/
 
 header {
-    text-align: center;
+    height: 576px;
 }
 
-header > h1 {
-    display: inline-block;
-    width: 500px;
-    height: 61px;
-    margin:  148px 0 31px 15px;
-    text-indent: -9999px;
-    background: url('../img/logo.png') no-repeat left top;
+header h1, header p {
+    display: none;
 }
 
-header > p {
-    font-size: 23px;
-    font-weight: 500;
-    text-shadow: black 1px 1px 2px ;
-    margin-bottom: 55px;
-}
-
-header > a {
+header a {
     display: block;
-    top: 60px;
-    width: 400px;
-    height: 180px;
-    left: 80px;
-    margin: auto;
+    top: 412px;
+    left: 393px;
+    width: 243px;
+    height: 173px;
     position: relative;
     text-indent: -9999em;
-    background: url('../img/stamp.png') no-repeat left top;
+    background: url('../img/stamp.png') 0 0 no-repeat;
 
 }
 
-header > a:active {
-    top: 50px;
-    height: 180px;
-
-}
-
-header > a span {
+header a span {
     display: block;
-    width: 400px;
-    height: 270px;
+    width: 243px;
+    height: 173px;
     position: absolute;
-    top: -49px;
+    top: -7px;
     cursor: pointer !important;
-    background: url('../img/stamp.png') no-repeat;
-    background-position: left -185px;
-    opacity:0;
-    -webkit-transition: opacity .5s ease-out;
-    -moz-transition: opacity .5s ease-out;
-    -o-transition: opacity .5s ease-out;
-    transition: opacity .5s ease-out;
+    background: url('../img/stamp.png') 0 -173px no-repeat;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
 }
 
-header > a:hover span {
+header a:hover span {
     opacity: .8;
-    -webkit-transition: opacity .3s ease-in;
-    -moz-transition: opacity .3s ease-in;
-    -o-transition: opacity .3s ease-in;
-    transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
 }
-       
-
 
 /*****************************************
 NAV
@@ -303,9 +282,9 @@ section p {
 
 #steps {
     display: block;
-    width: 900px;
-    height: 330px;
-    background: url('../img/reasons.png') top center no-repeat;
+    width: 838px;
+    height: 273px;
+    background: url('../img/steps.png') top center no-repeat;
     margin: 0 auto;
 }
 
@@ -352,16 +331,13 @@ footer {
 
 footer h1 {
     display: inline-block;
-    width: 500px;
-    height: 61px;
-    margin: 0 0 31px 15px;
-    text-indent: -9999px;
-    background: url('../img/logo.png') no-repeat left top;
+    width: 357px;
+    height: 107px;
+    margin: 0 0 31px 0;
+    text-indent: -99999em;
+    background: url('../img/strapline.png') no-repeat;
 }
 
 footer p {
-    font-size: 23px;
-    font-weight: 500;
-    text-shadow: black 1px 1px 2px ;
-    margin-bottom: 55px;
+    display: none;
 }
