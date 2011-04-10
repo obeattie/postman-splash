@@ -322,9 +322,6 @@ section p {
             background-position: -313px -94px;
         }
 
-/*****************************************
-SECTIONS
-******************************************/
 footer {
     text-align: center;
 }
@@ -341,3 +338,21 @@ footer h1 {
 footer p {
     display: none;
 }
+
+/* Next/previous arrows */
+a#prev-arrow, a#next-arrow {
+    position: fixed;
+    top: 50%;
+    left: 30px;
+    height: 64px;
+    width: 25px;
+    margin-top: -32px;
+    background: url('../img/arrows.png') 0 0 no-repeat;
+    text-indent: -99999em;
+}
+
+    a#next-arrow {
+        left: auto;
+        right: 30px;
+        background-position: -25px 0;
+    }
