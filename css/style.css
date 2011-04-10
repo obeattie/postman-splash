@@ -11,7 +11,7 @@ header, nav, section, footer {
 TEXT
 ******************************************/
 body {
-    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #6c6a67;
     padding-bottom: 800px;
     min-width: 960px;
@@ -355,4 +355,30 @@ a#prev-arrow, a#next-arrow {
         left: auto;
         right: 30px;
         background-position: -25px 0;
+    }
+
+/* Made by */
+a#madeby {
+    display: block;
+    width: 299px;
+    height: 89px;
+    background: url('../img/madeby.png') 0 0 no-repeat;
+    text-indent: -99999em;
+    margin: 10px auto 0 auto;
+}
+
+/* Facebook like button */
+#facebook-like {
+    width: 270px;
+    height: 269px;
+    display: block;
+    background: url('../img/hand.png') no-repeat;
+    position: relative;
+    margin: 20px auto 0 auto;
+}
+
+    #facebook-like iframe {
+        position: absolute;
+        top: 127px;
+        left: 105px;
     }
