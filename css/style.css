@@ -217,12 +217,13 @@ section p {
 }
 
 #throw {
-    background: url('../img/bin.png') left center no-repeat;
+    background: url('../img/pages.png') left center no-repeat;
+    height:426px;
 }
 
 #throw h2 {
     width: 391px;
-    height: 60px;
+    height: 40px;
     margin-left: 550px;
     text-indent: -9999px;
     background: url('../img/sharing.png') no-repeat left top;
@@ -238,14 +239,14 @@ section p {
 
     #friends h2 {
         width: 391px;
-        height: 60px;
+        height: 80px;
         text-indent: -9999px;
         background: url('../img/friends.png') no-repeat left top;
     }
 
 #inbox h2 {
     width: 431px;
-    height: 60px;
+    height: 80px;
     margin-left: 550px;
     text-indent: -9999px;
     background: url('../img/inbox.png') no-repeat left top;
