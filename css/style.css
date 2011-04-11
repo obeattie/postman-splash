@@ -151,31 +151,31 @@ NAV
 
 }
 
-#navi a:hover,
-#navi a:active {
-    opacity: 1;
-}
+    #navi a:hover,
+    #navi a:active {
+        opacity: 1;
+    }
 
+    #navi a[href="#throw"] {
+        background-position: -1px 9px;
+    }
 
-#navi a[href="#throw"] {
-    background-position: -1px 9px;
-}
+    #navi a[href="#friends"] {
+        background-position: -225px 9px;
+    }
 
-#navi a[href="#friends"] {
-    background-position: -111px 9px;
-}
+    #navi a[href="#inbox"] {
+        background-position: -349px 9px;
+        width: 36px;
+    }
 
-#navi a[href="#inbox"] {
-    background-position: -225px 9px;
-}
+    #navi a[href="#how"] {
+        background-position: -111px 9px;
+    }
 
-#navi a[href="#how"] {
-    background-position: -349px 9px;
-}
-
-#navi a[href="#follow"] {
-    background-position: -485px 9px;
-}
+    #navi a[href="#follow"] {
+        background-position: -485px 9px;
+    }
 
 /*****************************************
 SECTIONS
