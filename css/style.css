@@ -10,14 +10,8 @@ header, nav, section, footer {
 /*****************************************
 TEXT
 ******************************************/
-@font-face {
-    font-family: 'Ubuntu';
-    src: url('../fonts/ubuntu.ttf');
-    font-weight: 700;
-}
-
 body {
-    font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Calibri, GillSans, Trebuchet, sans-serif;
     color: #6c6a67;
     padding-bottom: 800px;
     min-width: 960px;
