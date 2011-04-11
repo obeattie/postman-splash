@@ -234,6 +234,7 @@ section p {
     #friends h2 {
         width: 391px;
         height: 80px;
+        margin-bottom: 10px;
         text-indent: -9999px;
         background: url('../img/friends.png') no-repeat left top;
     }
@@ -241,7 +242,7 @@ section p {
 #inbox h2 {
     width: 431px;
     height: 80px;
-    margin-left: 550px;
+    margin: 0 0 10px 550px;
     text-indent: -9999px;
     background: url('../img/inbox.png') no-repeat left top;
 }
