@@ -11,20 +11,15 @@ header, nav, section, footer {
 TEXT
 ******************************************/
 body {
-    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Calibri, GillSans, Trebuchet, sans-serif;
     color: #6c6a67;
-    padding-bottom: 400px;
+    padding-bottom: 800px;
+    min-width: 960px;
 }
 
 a {
     color: #6c6a67;
     text-decoration: none;
-}
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url('../fonts/Ubuntu-r.ttf');
-    font-weight: 700;
 }
 
 /*****************************************
@@ -37,7 +32,7 @@ html {
 
 body {
     background: url('../img/env.png') center top no-repeat;
-    min-width: 960px;
+
 }
 
 .wrapper {
@@ -50,66 +45,46 @@ HEADER
 ******************************************/
 
 header {
-    text-align: center;
+    height: 576px;
 }
 
-header > h1 {
-    display: inline-block;
-    width: 500px;
-    height: 61px;
-    margin:  148px 0 31px 15px;
-    text-indent: -9999px;
-    background: url('../img/logo.png') no-repeat left top;
+header h1, header p {
+    display: none;
 }
 
-header > p {
-    font-size: 23px;
-    font-weight: 500;
-    text-shadow: black 1px 1px 2px ;
-    margin-bottom: 55px;
-}
-
-header > a {
+header a {
     display: block;
-    top: 60px;
-    width: 400px;
-    height: 180px;
-    left: 80px;
-    margin: auto;
+    top: 412px;
+    left: 393px;
+    width: 243px;
+    height: 173px;
     position: relative;
     text-indent: -9999em;
-    background: url('../img/stamp.png') no-repeat left top;
+    background: url('../img/stamp.png') 0 0 no-repeat;
 
 }
 
-header > a:active {
-    top: 50px;
-    height: 180px;
-
-}
-
-header > a span {
+header a span {
     display: block;
-    width: 400px;
-    height: 270px;
+    width: 243px;
+    height: 173px;
     position: absolute;
-    top: -49px;
+    top: -7px;
     cursor: pointer !important;
-    background: url('../img/stamp.png') no-repeat;
-    background-position: left -185px;
-    opacity:0;
-    -webkit-transition: opacity .5s ease-out;
-    -moz-transition: opacity .5s ease-out;
-    -o-transition: opacity .5s ease-out;
-    transition: opacity .5s ease-out;
+    background: url('../img/stamp.png') 0 -173px no-repeat;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
 }
 
-header > a:hover span {
+header a:hover span {
     opacity: .8;
-    -webkit-transition: opacity .3s ease-in;
-    -moz-transition: opacity .3s ease-in;
-    -o-transition: opacity .3s ease-in;
-    transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
 }
 
 #appicon {
@@ -146,26 +121,26 @@ NAV
 #navi li {
     margin-right: 64px;
     float: left;
-    
+
 }
-        
+
 #navi li:last-child,
 #navi li.last {
      margin-right: 0;
 }
-            
+
 #navi li:hover,
 #navi li.active {
     opacity: 1;
 }
-            
+
 #navi li.active {
     width: 64px;
     background: url('../img/nav.png') no-repeat -1px -88px;
     background-position: left -75px;
 }
-            
-                   
+
+
 #navi a {
     display: block;
     width: 60px;
@@ -177,34 +152,34 @@ NAV
     text-indent: -9999px;
     overflow: hidden;
     opacity: 0.5;
-    
+
 }
-        
-#navi a:hover,
-#navi a:active {
-    opacity: 1;
-}
-    
-            
-#navi a[href="#throw"] {
-    background-position: -1px 9px;
-}
-            
-#navi a[href="#friends"] {
-    background-position: -111px 9px;
-}
-            
-#navi a[href="#inbox"] {
-    background-position: -225px 9px;
-}
-            
-#navi a[href="#how"] {
-    background-position: -349px 9px;
-}
-            
-#navi a[href="#follow"] {
-    background-position: -485px 9px;
-}
+
+    #navi a:hover,
+    #navi a:active {
+        opacity: 1;
+    }
+
+    #navi a[href="#throw"] {
+        background-position: -1px 9px;
+    }
+
+    #navi a[href="#friends"] {
+        background-position: -225px 9px;
+    }
+
+    #navi a[href="#inbox"] {
+        background-position: -349px 9px;
+        width: 36px;
+    }
+
+    #navi a[href="#how"] {
+        background-position: -111px 9px;
+    }
+
+    #navi a[href="#follow"] {
+        background-position: -485px 9px;
+    }
 
 /*****************************************
 SECTIONS
@@ -240,13 +215,14 @@ section p {
 }
 
 #throw {
-    background: url('../img/bin.png') left center no-repeat;
+    background: url('../img/pages.png') left center no-repeat;
+    height:426px;
 }
 
 #throw h2 {
     width: 391px;
-    height: 60px;
-    margin-left: 550px;
+    height: 40px;
+    margin: 60px 0 15px 550px;
     text-indent: -9999px;
     background: url('../img/sharing.png') no-repeat left top;
 }
@@ -261,15 +237,16 @@ section p {
 
     #friends h2 {
         width: 391px;
-        height: 60px;
+        height: 80px;
+        margin-bottom: 10px;
         text-indent: -9999px;
         background: url('../img/friends.png') no-repeat left top;
     }
 
 #inbox h2 {
     width: 431px;
-    height: 60px;
-    margin-left: 550px;
+    height: 80px;
+    margin: 0 0 10px 550px;
     text-indent: -9999px;
     background: url('../img/inbox.png') no-repeat left top;
 }
@@ -300,35 +277,137 @@ section p {
 }
 
 #how #send span {
-    font-size:20px;
+    font-size: 20px;
 }
 
 #steps {
-    width: 900px;
-    height: 330px;
-    background: url('../img/reasons.png') top center no-repeat;
-    margin: 0 auto;
+    display: block;
+    width: 838px;
+    height: 273px;
+    background: url('../img/steps.png') top center no-repeat;
+    margin: 20px auto 0 auto;
 }
 
-/*****************************************
-SECTIONS
-******************************************/
+    #steps li {
+        display: none;
+    }
+
+/* Download buttons */
+
+#download-chrome, #download-postman {
+    display: inline-block;
+    background: url('../img/download-buttons.png') 0 0 no-repeat;
+    text-indent: -99999em;
+    margin: 0 30px;
+}
+
+    #download-chrome {
+        width: 313px;
+        height: 94px;
+        position: relative;
+        top: 54px;
+    }
+
+        #download-chrome:active {
+            background-position: -313px 0;
+        }
+
+    #download-postman {
+        width: 313px;
+        height: 187px;
+        background-position: 0 -94px;
+    }
+
+        #download-postman:active {
+            background-position: -313px -94px;
+        }
+
 footer {
     text-align: center;
 }
 
 footer h1 {
     display: inline-block;
-    width: 500px;
-    height: 61px;
-    margin: 0 0 31px 15px;
-    text-indent: -9999px;
-    background: url('../img/logo.png') no-repeat left top;
+    width: 357px;
+    height: 107px;
+    margin: 0 0 31px 0;
+    text-indent: -99999em;
+    background: url('../img/strapline.png') no-repeat;
 }
 
 footer p {
-    font-size: 23px;
-    font-weight: 500;
-    text-shadow: black 1px 1px 2px ;
-    margin-bottom: 55px;
+    display: none;
 }
+
+/* Next/previous arrows */
+a#prev-arrow, a#next-arrow {
+    position: fixed;
+    top: 50%;
+    left: 30px;
+    height: 64px;
+    width: 25px;
+    margin-top: -32px;
+    background: url('../img/arrows.png') 0 0 no-repeat;
+    text-indent: -99999em;
+}
+
+    a#next-arrow {
+        left: auto;
+        right: 30px;
+        background-position: -25px 0;
+    }
+
+/* Made by */
+a#madeby {
+    display: block;
+    width: 299px;
+    height: 89px;
+    background: url('../img/madeby.png') 0 0 no-repeat;
+    text-indent: -99999em;
+    margin: 10px auto 0 auto;
+}
+
+/* Facebook like button */
+#facebook-like {
+    width: 270px;
+    height: 269px;
+    display: block;
+    background: url('../img/hand.png') no-repeat;
+    position: relative;
+    margin: 20px auto 0 auto;
+}
+
+    #facebook-like iframe {
+        position: absolute;
+        top: 127px;
+        left: 105px;
+    }
+
+/* Fork us */
+#github {
+    left: -65px;
+    height: 30px;
+    top: 40px;
+    position: absolute;
+    text-decoration: none;
+    width: 250px;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+    #github span {
+        background: #f2f2f2;
+        font-size: 14px;
+        left: 0;
+        padding: 5px 0;
+        position: absolute;
+        text-align: center;
+        width: 250px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+        box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+    }

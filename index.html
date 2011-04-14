@@ -11,19 +11,34 @@
 
     <title>Postman – Sharing made easy</title>
 
-    <link href="./favicon.ico" rel="shortcut icon" />
-    <link href="css/reset.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/tipsy.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="http://www.emberb0x.com/postman/img/favicon.png" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tipsy.css" />
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.tipsy.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-22655130-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </head>
 <body>
 <div class="wrapper">
     <header id="header">
-        <h1 id="banner">Postman</h1>
+        <h1>Postman</h1>
         <p>Sharing made easy.</p>
         <a href="#throw" id="ding" title="Get started">
             <span>Get started</span>
@@ -31,23 +46,16 @@
         <img src="img/appicon.png" id="appicon" alt="Postman icon" />
     </header>
 
+    <a id="prev-arrow" href="#" title="&larr; Previous">&larr; Previous</a>
+    <a id="next-arrow" href="#" title="Next &rarr;">Next &rarr;</a>
+
     <nav id="navi">
         <ol>
-            <li id="away">
-                <a href="#throw">Throw away</a>
-            </li>
-            <li id="all">
-                <a href="#friends">All your Friends</a>
-            </li>
-            <li id="person">
-                <a href="#inbox">Personal inbox</a>
-            </li>
-            <li id="it">
-                <a href="#how">How it works</a>
-            </li>
-            <li id="us">
-                <a href="#follow">Follow us</a>
-            </li>
+            <li><a href="#throw">Sharing made easy&hellip;</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#friends">All your friends with two clicks</a></li>
+            <li><a href="#inbox">A truly personal inbox</a></li>
+            <li><a href="#follow">Follow us</a></li>
         </ol>
     <div id="navi-block"></div>
     </nav>
@@ -55,48 +63,46 @@
     <section id="content">
         <ol>
             <li id="throw" class="target">
-                <div id="bin"></div>
-                <h2>Throw away your keyboard!</h2><br>
+                <h2>Sharing made easy...</h2>
+                <p>Introducing Postman, a Google Chrome extension for sharing links with your friends</p>
                 <p>If we know anything about the internet, it's that's it full of fun and useful things from the latest viral video on Youtube to a detailed tutorial on growing passionfruit&hellip; Yes, the internet has it all but how do we share this valuable information?</p>
-                <p>Introducing Postman, the fastest and easiest way to share links with your friends.</p>
-            </li>
 
-            <li id="friends" class="target">
-                <h2>All your friends with 2 clicks</h2><br>
-                <p>Typing out whole email addresses is so 2005! With Postman, simply connect via Facebook the first time you launch the app and instantly search through all your friends, send them links and receive them too.</p>
-            </li>
-
-            <li id="inbox" class="target">
-                <h2>A truly personal inbox</h2><br>
-                <p>No one knows you better than your friends, so who better to send you links to the things you want to see?</p>
-                <p>Whether it’s work-related, a new music video or just a tweet; Postman delivers instant desktop notifications and stores your links in your own personal inbox for you to check in your own time.</p>
             </li>
 
             <li id="how" class="target">
                 <h2>How it works</h2>
                 <p>To send the page that you're looking at&hellip;</p>
 
-                <ul id="steps">
+                <ol id="steps">
                     <li id="step-one">Hit the icon&hellip;</li>
                     <li id="step-two">Tell us who you want to send it to&hellip;</li>
                     <li id="step-three">Your friend will receive a notification via Postman or Facebook.</li>
-                </ul>
+                </ol>
 
                 <a id="download-chrome" href="http://www.google.com/chrome">Get Google Chrome</a>
-                <a id="download-postman" href="#">Install Postman</a>
+                <a id="download-postman" href="https://chrome.google.com/webstore/detail/ceebmhkhkjlbcehplmobnnhbibghnenj">Install Postman</a>
+            </li>
+
+            <li id="friends" class="target">
+                <h2>All your friends with two clicks</h2>
+                <p>Typing out whole email addresses is so 2005! With Postman, simply connect via Facebook the first time you launch the app and instantly search through all your friends, send them links and receive them too.</p>
+            </li>
+
+            <li id="inbox" class="target">
+                <h2>A truly personal inbox</h2>
+                <p>No one knows you better than your friends, so who better to send you links to the things you want to see?</p>
+                <p>Whether it’s work-related, a new music video or just a tweet; Postman delivers instant desktop notifications and stores your links in your own personal inbox for you to check in your own time.</p>
             </li>
         </ol>
 
         <footer role="fandt" id="follow" class="target">
-                <h1 id="banner">Postman</h1>
-                <p>Sharing made easy.</p>
-            <div>
-                <h2>Follow us on twitter and facebook® </h2>
-
-                <div id="facebook">
-                    <em>Follow us</em> on Facebook
-                </div>
+            <h1>Postman</h1>
+            <p>Sharing made easy.</p>
+            <div id="facebook-like">
+                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FEmberbox%2F201113786582619&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
             </div>
+            <a id="madeby" href="http://www.emberb0x.com/">An Emberbox production</a>
+            <a id="github" href="https://github.com/obeattie/postman-client"><span>Fork on GitHub</span></a>
         </footer>
     </section>
 </div>

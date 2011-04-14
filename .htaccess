@@ -1,0 +1,3 @@
+<IfModule mod_headers.c>
+    Header set X-Powered-By "Wasabi peanuts and Corona"
+</IfModule>

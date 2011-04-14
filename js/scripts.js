@@ -78,4 +78,25 @@ $(function(){
             });
         }
     });
+    
+    // Previous/next arrow behaviours
+    $('a#prev-arrow').click(function(e){
+        $(document).trigger({
+            type: 'keydown',
+            keyCode: 37
+        });
+        return false;
+    });
+    $('a#next-arrow').click(function(e){
+        $(document).trigger({
+            type: 'keydown',
+            keyCode: 39
+        });
+        return false;
+    });
+    
+    // Hide the 'download chrome' button if they already have it
+    if (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())){
+        //$('#download-chrome').hide();
+    }
 });
