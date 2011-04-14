@@ -111,8 +111,10 @@ header > a:hover span {
     -o-transition: opacity .3s ease-in;
     transition: opacity .3s ease-in;
 }
-       
 
+#appicon {
+    display: none;
+}
 
 /*****************************************
 NAV
