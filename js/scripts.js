@@ -9,7 +9,7 @@ var BS = {
         var height = target.outerHeight(true);
         var viewport = $(window).height();
         var position = (top - ((viewport - height) / 2));
-        $('body').animate({
+        $('html, body').animate({
             scrollTop: position
         }, { queue: false });
         window.location.hash = ('!/' + target.attr('id'));
