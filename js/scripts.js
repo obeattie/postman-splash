@@ -97,6 +97,6 @@ $(function(){
     
     // Hide the 'download chrome' button if they already have it
     if (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())){
-        //$('#download-chrome').hide();
+        $('#download-chrome').hide();
     }
 });
